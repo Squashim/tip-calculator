@@ -1,0 +1,61 @@
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem 0;
+	h1 {
+		text-transform: uppercase;
+		font-size: 1.5rem;
+		letter-spacing: 0.5rem;
+		color: $neutral400;
+	}
+}
+main {
+	padding: 2rem;
+	background-color: $neutral0;
+	border-radius: 2rem 2rem 0 0;
+	fieldset {
+		legend {
+			margin-bottom: 0.25rem;
+			color: $neutral200;
+		}
+		input {
+			outline: none;
+			border: 0;
+			background-color: $neutral50;
+			border-radius: 0.5rem;
+			font-family: $ffamily;
+			color: $neutral400;
+			padding: 0.25rem 0.75rem;
+			font-size: $fsize;
+			text-align: right;
+			width: 100%;
+		}
+	}
+	.tips {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+		label {
+			border-radius: 0.5rem;
+			padding: 0.25rem 0;
+			font-size: $fsize;
+			color: $neutral0;
+			background-color: $neutral400;
+			text-align: center;
+			cursor: pointer;
+			&:hover {
+				background-color: $primary200;
+				color: $neutral400;
+			}
+			&:last-child {
+				background-color: $neutral50;
+				color: $neutral200;
+				text-align: right;
+				padding-right: 1rem;
+			}
+			input {
+			}
+		}
+	}
+}
