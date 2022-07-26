@@ -43,6 +43,7 @@ main {
 			color: $neutral0;
 			background-color: $neutral400;
 			text-align: center;
+			z-index: 3;
 			cursor: pointer;
 			&:hover {
 				background-color: $primary200;
@@ -53,8 +54,6 @@ main {
 				color: $neutral200;
 				text-align: right;
 				padding-right: 1rem;
-			}
-			input {
 			}
 		}
 	}

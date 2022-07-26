@@ -7,6 +7,12 @@
   box-sizing: border-box;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 body {
   min-height: 100vh;
   font-family: "Space Mono", monospace;
@@ -61,6 +67,7 @@ main .tips label {
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(183deg, 100%, 15%);
   text-align: center;
+  z-index: 3;
   cursor: pointer;
 }
 main .tips label:hover {
