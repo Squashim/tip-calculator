@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
 
 //Colors
 $primary200: hsl(172, 67%, 45%);
-
 
 $neutral400: hsl(183, 100%, 15%);
 $neutral200: hsl(186, 14%, 43%);
@@ -11,8 +10,9 @@ $neutral100: hsl(185, 41%, 84%);
 $neutral50: hsl(189, 41%, 97%);
 $neutral0: hsl(0, 0%, 100%);
 
+$active: #9de9df;
 
 //Fonts
 $fsize: 24px;
-$ffamily: 'Space Mono', monospace;
+$ffamily: "Space Mono", monospace;
 $fw-bold: 700;

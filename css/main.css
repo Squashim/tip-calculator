@@ -39,13 +39,29 @@ main {
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 2rem 2rem 0 0;
 }
+main fieldset {
+  border: none;
+}
+main fieldset #bill {
+  background-image: url(/images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 1rem;
+}
+main fieldset #people {
+  background-image: url(/images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: 1rem;
+}
+main fieldset:not(:last-child) {
+  margin-bottom: 2rem;
+}
 main fieldset legend {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.75rem;
   color: hsl(186deg, 14%, 43%);
 }
 main fieldset input[type=number] {
   outline: none;
-  border: 0;
+  border: 2px solid hsl(189deg, 41%, 97%);
   background-color: hsl(189deg, 41%, 97%);
   border-radius: 0.5rem;
   font-family: "Space Mono", monospace;
@@ -55,11 +71,23 @@ main fieldset input[type=number] {
   text-align: right;
   width: 100%;
 }
+main fieldset input[type=number]:focus {
+  border-color: #9de9df;
+  caret-color: #9de9df;
+}
+main fieldset input[type=number]::-moz-placeholder {
+  color: hsl(184deg, 14%, 56%);
+}
+main fieldset input[type=number]:-ms-input-placeholder {
+  color: hsl(184deg, 14%, 56%);
+}
+main fieldset input[type=number]::placeholder {
+  color: hsl(184deg, 14%, 56%);
+}
 main .tips {
-  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 1.1rem;
 }
 main .tips label {
   border-radius: 0.5rem;
@@ -69,22 +97,99 @@ main .tips label {
   background-color: hsl(183deg, 100%, 15%);
   text-align: center;
   cursor: pointer;
+  border: 2px solid hsl(183deg, 100%, 15%);
 }
 main .tips label:hover {
-  background-color: hsl(172deg, 67%, 45%);
+  background-color: #9de9df;
   color: hsl(183deg, 100%, 15%);
-}
-main .tips label input[type=radio] {
-  opacity: 0;
-  width: 0;
-  position: fixed;
+  border-color: #9de9df;
 }
 main .tips input[type=radio] {
-  display: block;
-  width: 49%;
-  height: 44px;
-  opacity: 0;
+  display: none;
+}
+main .tips input[type=radio]:checked + label {
+  background-color: hsl(172deg, 67%, 45%);
+  color: hsl(183deg, 100%, 15%);
+  border-color: hsl(172deg, 67%, 45%);
+}
+main .tips #custom::-moz-placeholder {
+  color: hsl(186deg, 14%, 43%);
+}
+main .tips #custom:-ms-input-placeholder {
+  color: hsl(186deg, 14%, 43%);
+}
+main .tips #custom::placeholder {
+  color: hsl(186deg, 14%, 43%);
+}
+main .people {
+  position: relative;
+}
+main .people .error {
+  display: none;
+  color: indianred;
   position: absolute;
-  bottom: 0;
   right: 0;
+}
+main .summary {
+  background-color: hsl(183deg, 100%, 15%);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  gap: 1.5rem;
+}
+main .summary .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+main .summary .row .col {
+  display: flex;
+  flex-direction: column;
+}
+main .summary .row .col h2 {
+  font-size: 1rem;
+  color: hsl(0deg, 0%, 100%);
+}
+main .summary .row .col p {
+  font-size: 0.8rem;
+  color: hsl(184deg, 14%, 56%);
+}
+main .summary .row span {
+  font-size: 30px;
+  color: hsl(172deg, 67%, 45%);
+}
+main .summary button {
+  border: none;
+  border-radius: 0.3rem;
+  font-family: "Space Mono", monospace;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 0.3rem 0;
+  background-color: hsl(172deg, 67%, 45%);
+  color: hsl(183deg, 100%, 15%);
+  cursor: pointer;
+  opacity: 1;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.349);
+}
+main .summary button:hover {
+  background-color: #9de9df;
+}
+main .summary button.inactive {
+  cursor: not-allowed;
+  opacity: 0.2;
+}
+main .summary button.inactive:hover {
+  background-color: hsl(172deg, 67%, 45%);
+}
+
+footer {
+  background-color: hsl(0deg, 0%, 100%);
+  font-size: 0.8rem;
+  text-align: center;
+  color: hsl(186deg, 14%, 43%);
+}
+footer a {
+  color: hsl(183deg, 100%, 15%);
 }/*# sourceMappingURL=main.css.map */
