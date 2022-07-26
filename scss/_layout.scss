@@ -19,7 +19,7 @@ main {
 			margin-bottom: 0.25rem;
 			color: $neutral200;
 		}
-		input {
+		input[type="number"] {
 			outline: none;
 			border: 0;
 			background-color: $neutral50;
@@ -33,6 +33,7 @@ main {
 		}
 	}
 	.tips {
+		position: relative;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1rem;
@@ -43,18 +44,25 @@ main {
 			color: $neutral0;
 			background-color: $neutral400;
 			text-align: center;
-			z-index: 3;
 			cursor: pointer;
 			&:hover {
 				background-color: $primary200;
 				color: $neutral400;
 			}
-			&:last-child {
-				background-color: $neutral50;
-				color: $neutral200;
-				text-align: right;
-				padding-right: 1rem;
+			input[type="radio"] {
+				opacity: 0;
+				width: 0;
+				position: fixed;
 			}
+		}
+		input[type="radio"] {
+			display: block;
+			width: 49%;
+			height: 44px;
+			opacity: 0;
+			position: absolute;
+			bottom: 0;
+			right: 0;
 		}
 	}
 }
