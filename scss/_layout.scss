@@ -83,7 +83,7 @@ main {
 		}
 		#custom {
 			&::placeholder {
-				color: $neutral200;
+				color: var(--r, $neutral200);
 			}
 		}
 	}
@@ -155,4 +155,7 @@ footer {
 	position: absolute;
 	color: indianred;
 	right: 0;
+}
+.error-border {
+	border-color: indianred;
 }

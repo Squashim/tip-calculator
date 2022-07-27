@@ -114,13 +114,13 @@ main .tips-container input[type=radio]:checked + label {
   border-color: hsl(172deg, 67%, 45%);
 }
 main .tips-container #custom::-moz-placeholder {
-  color: hsl(186deg, 14%, 43%);
+  color: var(--r, hsl(186deg, 14%, 43%));
 }
 main .tips-container #custom:-ms-input-placeholder {
-  color: hsl(186deg, 14%, 43%);
+  color: var(--r, hsl(186deg, 14%, 43%));
 }
 main .tips-container #custom::placeholder {
-  color: hsl(186deg, 14%, 43%);
+  color: var(--r, hsl(186deg, 14%, 43%));
 }
 main .summary-container {
   background-color: hsl(183deg, 100%, 15%);
@@ -191,4 +191,8 @@ footer a {
   position: absolute;
   color: indianred;
   right: 0;
+}
+
+.error-border {
+  border-color: indianred;
 }/*# sourceMappingURL=main.css.map */
