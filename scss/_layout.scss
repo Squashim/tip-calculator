@@ -15,6 +15,7 @@ main {
 	background-color: $neutral0;
 	border-radius: 2rem 2rem 0 0;
 	fieldset {
+		position: relative;
 		border: none;
 		#bill {
 			background-image: url(/images/icon-dollar.svg);
@@ -53,7 +54,7 @@ main {
 			}
 		}
 	}
-	.tips {
+	.tips-container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1.1rem;
@@ -86,16 +87,7 @@ main {
 			}
 		}
 	}
-	.people {
-		position: relative;
-		.error {
-			display: none;
-			color: indianred;
-			position: absolute;
-			right: 0;
-		}
-	}
-	.summary {
+	.summary-container {
 		background-color: $neutral400;
 		border-radius: 1rem;
 		display: flex;
@@ -157,4 +149,10 @@ footer {
 	a {
 		color: $neutral400;
 	}
+}
+.error {
+	display: none;
+	position: absolute;
+	color: indianred;
+	right: 0;
 }

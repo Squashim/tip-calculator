@@ -40,6 +40,7 @@ main {
   border-radius: 2rem 2rem 0 0;
 }
 main fieldset {
+  position: relative;
   border: none;
 }
 main fieldset #bill {
@@ -84,12 +85,12 @@ main fieldset input[type=number]:-ms-input-placeholder {
 main fieldset input[type=number]::placeholder {
   color: hsl(184deg, 14%, 56%);
 }
-main .tips {
+main .tips-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.1rem;
 }
-main .tips label {
+main .tips-container label {
   border-radius: 0.5rem;
   padding: 0.25rem 0;
   font-size: 24px;
@@ -99,38 +100,29 @@ main .tips label {
   cursor: pointer;
   border: 2px solid hsl(183deg, 100%, 15%);
 }
-main .tips label:hover {
+main .tips-container label:hover {
   background-color: #9de9df;
   color: hsl(183deg, 100%, 15%);
   border-color: #9de9df;
 }
-main .tips input[type=radio] {
+main .tips-container input[type=radio] {
   display: none;
 }
-main .tips input[type=radio]:checked + label {
+main .tips-container input[type=radio]:checked + label {
   background-color: hsl(172deg, 67%, 45%);
   color: hsl(183deg, 100%, 15%);
   border-color: hsl(172deg, 67%, 45%);
 }
-main .tips #custom::-moz-placeholder {
+main .tips-container #custom::-moz-placeholder {
   color: hsl(186deg, 14%, 43%);
 }
-main .tips #custom:-ms-input-placeholder {
+main .tips-container #custom:-ms-input-placeholder {
   color: hsl(186deg, 14%, 43%);
 }
-main .tips #custom::placeholder {
+main .tips-container #custom::placeholder {
   color: hsl(186deg, 14%, 43%);
 }
-main .people {
-  position: relative;
-}
-main .people .error {
-  display: none;
-  color: indianred;
-  position: absolute;
-  right: 0;
-}
-main .summary {
+main .summary-container {
   background-color: hsl(183deg, 100%, 15%);
   border-radius: 1rem;
   display: flex;
@@ -138,29 +130,29 @@ main .summary {
   padding: 2rem 1.5rem;
   gap: 1.5rem;
 }
-main .summary .row {
+main .summary-container .row {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-main .summary .row .col {
+main .summary-container .row .col {
   display: flex;
   flex-direction: column;
 }
-main .summary .row .col h2 {
+main .summary-container .row .col h2 {
   font-size: 1rem;
   color: hsl(0deg, 0%, 100%);
 }
-main .summary .row .col p {
+main .summary-container .row .col p {
   font-size: 0.8rem;
   color: hsl(184deg, 14%, 56%);
 }
-main .summary .row span {
+main .summary-container .row span {
   font-size: 30px;
   color: hsl(172deg, 67%, 45%);
 }
-main .summary button {
+main .summary-container button {
   border: none;
   border-radius: 0.3rem;
   font-family: "Space Mono", monospace;
@@ -173,14 +165,14 @@ main .summary button {
   opacity: 1;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.349);
 }
-main .summary button:hover {
+main .summary-container button:hover {
   background-color: #9de9df;
 }
-main .summary button.inactive {
+main .summary-container button.inactive {
   cursor: not-allowed;
   opacity: 0.2;
 }
-main .summary button.inactive:hover {
+main .summary-container button.inactive:hover {
   background-color: hsl(172deg, 67%, 45%);
 }
 
@@ -192,4 +184,11 @@ footer {
 }
 footer a {
   color: hsl(183deg, 100%, 15%);
+}
+
+.error {
+  display: none;
+  position: absolute;
+  color: indianred;
+  right: 0;
 }/*# sourceMappingURL=main.css.map */

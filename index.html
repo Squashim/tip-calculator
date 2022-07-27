@@ -20,13 +20,22 @@
 		<main>
 			<form action="#">
 				<!--BILL SECTION-->
-				<fieldset>
-					<legend>Bill</legend>
-					<input type="number" id="bill" placeholder="0" />
+				<fieldset class="bill-container">
+					<legend>
+						<span style="float: left">Bill</span>
+						<span style="float: right" class="error">Must be more than 0</span>
+					</legend>
+
+					<input
+						onchange="checkError(this.value, this.id)"
+						type="number"
+						id="bill"
+						placeholder="0"
+					/>
 				</fieldset>
 
 				<!--TIP SECTION-->
-				<fieldset class="tips">
+				<fieldset class="tips-container">
 					<legend>Select Tip %</legend>
 
 					<input type="radio" name="tip" id="5" value="5" />
@@ -51,16 +60,23 @@
 				</fieldset>
 
 				<!--PEOPLE SECTION-->
-				<fieldset class="people">
+				<fieldset class="people-container">
 					<legend>
 						<span style="float: left">Number of People</span>
 						<span style="float: right" class="error">Can't be zero</span>
 					</legend>
-					<input type="number" min="0" max="25" placeholder="0" id="people" />
+					<input
+						onchange="checkError(this.value, this.id)"
+						type="number"
+						min="0"
+						max="25"
+						placeholder="0"
+						id="people"
+					/>
 				</fieldset>
 
 				<!-- SUMMARY SECTION-->
-				<fieldset class="summary">
+				<fieldset class="summary-container">
 					<div class="row">
 						<div class="col">
 							<h2>Tip Amount</h2>
@@ -75,7 +91,7 @@
 						</div>
 						<span class="total">$32.79</span>
 					</div>
-					<button class="inactive" type="reset">Reset</button>
+					<button class="inactive reset" type="reset">Reset</button>
 				</fieldset>
 			</form>
 		</main>
