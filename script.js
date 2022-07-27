@@ -1,5 +1,5 @@
 const tipBtns = Array.from(
-	document.querySelectorAll('.tips input[type="radio"]')
+	document.querySelectorAll('.tips-container input[type="radio"]')
 );
 const bill = document.querySelector("#bill");
 const customTip = document.querySelector("#custom");
@@ -7,6 +7,7 @@ const people = document.querySelector("#people");
 const tipAmount = document.querySelector(".tip-amount");
 const total = document.querySelector(".total");
 const resetBtn = document.querySelector(".reset");
+let tipPercent = 1;
 
 function checkError(value, id) {
 	const errors = document.querySelectorAll(".error");
@@ -34,7 +35,6 @@ function checkError(value, id) {
 		} else {
 			people.style.borderColor = "hsl(183, 100%, 15%)";
 		}
-		return;
 	}
 }
 
@@ -43,15 +43,25 @@ function checkCustomTip(value) {
 		customTip.value = "";
 		customTip.style.setProperty("--r", "indianred");
 		customTip.style.borderColor = "indianred";
-		customTip.placeholder = "0-100%";
+		customTip.placeholder = "1-100%";
 	} else {
 		customTip.style.borderColor = "hsl(183, 100%, 15%)";
-		return;
+		if (customTip.value != "") {
+			for (const btn of tipBtns) {
+				btn.checked = false;
+			}
+			tipPercent = customTip.value;
+		}
 	}
 }
-
-for (const btn of tipBtns) {
-	btn.addEventListener("click", () => {
-		console.log(btn);
-	});
+let result;
+function tipOption(percent) {
+	customTip.value = "";
+	customTip.style.borderColor = "hsl(189, 41%, 97%)";
+	customTip.placeholder = "Custom";
+	customTip.style.setProperty("--r", "hsl(186, 14%, 43%)");
+	result = percent.value;
+	console.log(result);
 }
+console.log(result);
+function calculate() {}
