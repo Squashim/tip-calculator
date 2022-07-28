@@ -13,13 +13,17 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 body {
   min-height: 100vh;
-  align-items: center;
   font-family: "Space Mono", monospace;
   background-color: hsl(185deg, 41%, 84%);
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
@@ -44,6 +48,7 @@ main {
 @media (min-width: 50rem) {
   main {
     margin-top: 3rem;
+    max-width: 56rem;
   }
 }
 @media (min-width: 50rem) {
