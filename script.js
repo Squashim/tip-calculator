@@ -7,7 +7,7 @@ const people = document.querySelector("#people");
 const tipAmount = document.querySelector(".tip-amount");
 const total = document.querySelector(".total");
 const resetBtn = document.querySelector(".reset");
-let tipPercent = 1;
+let tipPercent = 0;
 
 function checkError(value, id) {
 	const errors = document.querySelectorAll(".error");
@@ -36,6 +36,7 @@ function checkError(value, id) {
 			people.style.borderColor = "hsl(183, 100%, 15%)";
 		}
 	}
+	calculate();
 }
 
 function checkCustomTip(value) {
@@ -50,18 +51,44 @@ function checkCustomTip(value) {
 			for (const btn of tipBtns) {
 				btn.checked = false;
 			}
-			tipPercent = customTip.value;
 		}
+		tipPercent = customTip.value;
+		calculate();
 	}
 }
-let result;
 function tipOption(percent) {
 	customTip.value = "";
 	customTip.style.borderColor = "hsl(189, 41%, 97%)";
 	customTip.placeholder = "Custom";
 	customTip.style.setProperty("--r", "hsl(186, 14%, 43%)");
-	result = percent.value;
-	console.log(result);
+	tipPercent = percent.value;
+	calculate();
 }
-console.log(result);
-function calculate() {}
+function calculate() {
+	if (tipPercent > 0 && bill.value > 0 && people.value > 0) {
+		let tipPerson;
+		let totalPerson;
+		tipPerson = (bill.value * (tipPercent / 100)) / people.value;
+		totalPerson = bill.value / people.value + tipPerson;
+		tipAmount.textContent = "$" + Math.round(tipPerson * 100) / 100;
+		total.textContent = "$" + Math.round(totalPerson * 100) / 100;
+		resetBtn.classList.remove("inactive");
+		resetBtn.disabled = false;
+	} else {
+		resetBtn.disabled = true;
+		tipAmount.textContent = "$0.00";
+		total.textContent = "$0.00";
+	}
+}
+
+function resetVal() {
+	tipPercent = 0;
+	tipAmount.textContent = "$0.00";
+	total.textContent = "$0.00";
+	bill.style.borderColor = "hsl(189, 41%, 97%)";
+	people.style.borderColor = "hsl(189, 41%, 97%)";
+	customTip.placeholder = "Custom";
+	customTip.style.borderColor = "hsl(189, 41%, 97%)";
+	customTip.style.setProperty("--r", "hsl(186, 14%, 43%)");
+	resetBtn.classList.add("inactive");
+}
