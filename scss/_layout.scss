@@ -30,12 +30,12 @@ main {
 		position: relative;
 		border: none;
 		#bill {
-			background-image: url(/images/icon-dollar.svg);
+			background-image: url("../images/icon-dollar.svg");
 			background-repeat: no-repeat;
 			background-position: 1rem;
 		}
 		#people {
-			background-image: url(/images/icon-person.svg);
+			background-image: url("../images/icon-person.svg");
 			background-repeat: no-repeat;
 			background-position: 1rem;
 		}
