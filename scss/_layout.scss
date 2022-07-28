@@ -1,3 +1,4 @@
+@import "media";
 header {
 	display: flex;
 	justify-content: center;
@@ -13,7 +14,17 @@ header {
 main {
 	padding: 2rem;
 	background-color: $neutral0;
-	border-radius: 2rem 2rem 0 0;
+	border-radius: 2rem;
+	@include desktop {
+		margin-top: 3rem;
+	}
+	form {
+		@include desktop {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 0 2.5rem;
+		}
+	}
 	fieldset {
 		position: relative;
 		border: none;
@@ -58,6 +69,9 @@ main {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1.1rem;
+		@include desktop {
+			grid-template-columns: repeat(3, 1fr);
+		}
 		label {
 			border-radius: 0.5rem;
 			padding: 0.25rem 0;
@@ -88,6 +102,14 @@ main {
 		}
 	}
 	.summary-container {
+		@include desktop {
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 1;
+			grid-row-end: 4;
+			padding: 2.5rem 2rem;
+			gap: 3rem;
+		}
 		background-color: $neutral400;
 		border-radius: 1rem;
 		display: flex;
@@ -114,6 +136,9 @@ main {
 			span {
 				font-size: 30px;
 				color: $primary200;
+				@include desktop {
+					font-size: 40px;
+				}
 			}
 		}
 		button {
@@ -131,6 +156,9 @@ main {
 			&:hover {
 				background-color: $active;
 			}
+			@include desktop {
+				margin: auto 0 0 0;
+			}
 		}
 		button.inactive {
 			cursor: not-allowed;
@@ -142,12 +170,15 @@ main {
 	}
 }
 footer {
-	background-color: $neutral0;
+	background-color: $neutral100;
 	font-size: 0.8rem;
 	text-align: center;
 	color: $neutral200;
 	a {
 		color: $neutral400;
+	}
+	@include desktop {
+		margin-top: 3rem;
 	}
 }
 .error {

@@ -12,8 +12,10 @@ input::-webkit-inner-spin-button {
 }
 body {
 	min-height: 100vh;
+	align-items: center;
 	font-family: $ffamily;
 	background-color: $neutral100;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 }

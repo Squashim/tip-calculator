@@ -15,10 +15,12 @@ input::-webkit-inner-spin-button {
 
 body {
   min-height: 100vh;
+  align-items: center;
   font-family: "Space Mono", monospace;
   background-color: hsl(185deg, 41%, 84%);
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 header {
@@ -37,7 +39,19 @@ header h1 {
 main {
   padding: 2rem;
   background-color: hsl(0deg, 0%, 100%);
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 2rem;
+}
+@media (min-width: 50rem) {
+  main {
+    margin-top: 3rem;
+  }
+}
+@media (min-width: 50rem) {
+  main form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 2.5rem;
+  }
 }
 main fieldset {
   position: relative;
@@ -90,6 +104,11 @@ main .tips-container {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.1rem;
 }
+@media (min-width: 50rem) {
+  main .tips-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 main .tips-container label {
   border-radius: 0.5rem;
   padding: 0.25rem 0;
@@ -130,6 +149,16 @@ main .summary-container {
   padding: 2rem 1.5rem;
   gap: 1.5rem;
 }
+@media (min-width: 50rem) {
+  main .summary-container {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    padding: 2.5rem 2rem;
+    gap: 3rem;
+  }
+}
 main .summary-container .row {
   display: flex;
   flex-direction: row;
@@ -152,6 +181,11 @@ main .summary-container .row span {
   font-size: 30px;
   color: hsl(172deg, 67%, 45%);
 }
+@media (min-width: 50rem) {
+  main .summary-container .row span {
+    font-size: 40px;
+  }
+}
 main .summary-container button {
   border: none;
   border-radius: 0.3rem;
@@ -168,6 +202,11 @@ main .summary-container button {
 main .summary-container button:hover {
   background-color: #9de9df;
 }
+@media (min-width: 50rem) {
+  main .summary-container button {
+    margin: auto 0 0 0;
+  }
+}
 main .summary-container button.inactive {
   cursor: not-allowed;
   opacity: 0.2;
@@ -177,13 +216,18 @@ main .summary-container button.inactive:hover {
 }
 
 footer {
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(185deg, 41%, 84%);
   font-size: 0.8rem;
   text-align: center;
   color: hsl(186deg, 14%, 43%);
 }
 footer a {
   color: hsl(183deg, 100%, 15%);
+}
+@media (min-width: 50rem) {
+  footer {
+    margin-top: 3rem;
+  }
 }
 
 .error {
