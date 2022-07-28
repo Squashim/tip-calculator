@@ -17,6 +17,7 @@ main {
 	border-radius: 2rem;
 	@include desktop {
 		margin-top: 3rem;
+		max-width: 896px;
 	}
 	form {
 		@include desktop {

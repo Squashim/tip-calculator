@@ -10,12 +10,15 @@ input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
+input[type="number"] {
+	-moz-appearance: textfield;
+}
 body {
 	min-height: 100vh;
-	align-items: center;
 	font-family: $ffamily;
 	background-color: $neutral100;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	justify-content: center;
 }
