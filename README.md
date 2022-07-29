@@ -38,7 +38,7 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/responsive-tip-calculator-with-sass-and-js-JgcYxNNPmR](https://www.frontendmentor.io/solutions/responsive-tip-calculator-with-sass-and-js-JgcYxNNPmR)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-tip-calculator-with-sass-and-js-1h6uT16RpH](https://www.frontendmentor.io/solutions/responsive-tip-calculator-with-sass-and-js-1h6uT16RpH)
 - Live Site URL: [https://squashim.github.io/tip-calculator/](https://squashim.github.io/tip-calculator/)
 
 ### Built with
