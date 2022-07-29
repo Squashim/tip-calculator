@@ -60,7 +60,7 @@ function tipOption(percent) {
 	customTip.value = "";
 	customTip.style.borderColor = "hsl(189, 41%, 97%)";
 	customTip.placeholder = "Custom";
-	customTip.style.setProperty("--r", "hsl(186, 14%, 43%)");
+	customTip.style.setProperty("--r", "hsl(184, 14%, 56%)");
 	tipPercent = percent.value;
 	calculate();
 }
@@ -75,6 +75,7 @@ function calculate() {
 		resetBtn.classList.remove("inactive");
 		resetBtn.disabled = false;
 	} else {
+		resetBtn.classList.add("inactive");
 		resetBtn.disabled = true;
 		tipAmount.textContent = "$0.00";
 		total.textContent = "$0.00";
@@ -89,6 +90,6 @@ function resetVal() {
 	people.style.borderColor = "hsl(189, 41%, 97%)";
 	customTip.placeholder = "Custom";
 	customTip.style.borderColor = "hsl(189, 41%, 97%)";
-	customTip.style.setProperty("--r", "hsl(186, 14%, 43%)");
+	customTip.style.setProperty("--r", "hsl(184, 14%, 56%)");
 	resetBtn.classList.add("inactive");
 }

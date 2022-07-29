@@ -44,6 +44,7 @@ main {
   padding: 2rem;
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 2rem;
+  box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 50rem) {
   main {
@@ -138,13 +139,13 @@ main .tips-container input[type=radio]:checked + label {
   border-color: hsl(172deg, 67%, 45%);
 }
 main .tips-container #custom::-moz-placeholder {
-  color: var(--r, hsl(186deg, 14%, 43%));
+  color: var(--r, hsl(184deg, 14%, 56%));
 }
 main .tips-container #custom:-ms-input-placeholder {
-  color: var(--r, hsl(186deg, 14%, 43%));
+  color: var(--r, hsl(184deg, 14%, 56%));
 }
 main .tips-container #custom::placeholder {
-  color: var(--r, hsl(186deg, 14%, 43%));
+  color: var(--r, hsl(184deg, 14%, 56%));
 }
 main .summary-container {
   background-color: hsl(183deg, 100%, 15%);

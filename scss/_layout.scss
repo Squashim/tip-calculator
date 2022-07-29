@@ -15,6 +15,7 @@ main {
 	padding: 2rem;
 	background-color: $neutral0;
 	border-radius: 2rem;
+	box-shadow: 0 0.25rem 2rem rgba(0, 0, 0, 0.1);
 	@include desktop {
 		margin-top: 3rem;
 		max-width: 56rem;
@@ -98,7 +99,7 @@ main {
 		}
 		#custom {
 			&::placeholder {
-				color: var(--r, $neutral200);
+				color: var(--r, $neutral150);
 			}
 		}
 	}
